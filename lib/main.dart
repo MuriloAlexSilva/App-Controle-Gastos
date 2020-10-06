@@ -1,3 +1,4 @@
+import 'package:controle_gastos/controllers/app_controller.dart';
 import 'package:controle_gastos/pages/BalancoMensal.dart';
 import 'package:controle_gastos/pages/Receitas.dart';
 import 'package:flutter/material.dart';
@@ -10,20 +11,21 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        brightness: Brightness.dark,
-        primaryColor: Colors.black, //Colorir o AppBar
-        accentColor: Colors.greenAccent,
-        primaryIconTheme: IconThemeData(color: Colors.greenAccent),
-        floatingActionButtonTheme: FloatingActionButtonThemeData(
-          backgroundColor: Colors.greenAccent,
-          foregroundColor: Colors.white, //Para colorir o icon
-        ),
-      ),
-      home: BalancoMensal(),
-      debugShowCheckedModeBanner: false,
+    return AnimatedBuilder(
+      animation: AppController.instance,
+      builder: (context, child) {
+        return MaterialApp(
+          title: 'Flutter Demo',
+          theme: ThemeData(
+            brightness: AppController.instance.isDarkTheme
+                ? Brightness.dark
+                : Brightness.light, //Para mudar o formato do tema
+            primarySwatch: Colors.teal,
+          ),
+          home: BalancoMensal(),
+          debugShowCheckedModeBanner: false,
+        );
+      },
     );
   }
 }

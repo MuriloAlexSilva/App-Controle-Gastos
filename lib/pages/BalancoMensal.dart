@@ -1,3 +1,4 @@
+import 'package:controle_gastos/controllers/app_controller.dart';
 import 'package:controle_gastos/widgets/CustomContainer.dart';
 import 'package:controle_gastos/widgets/CustomDrawer.dart';
 import 'package:controle_gastos/widgets/CustomFloatingButton.dart';
@@ -18,7 +19,7 @@ class _BalancoMensalState extends State<BalancoMensal> {
         title: Text(
           "Balanço Mensal",
         ),
-        actions: [Icon(Icons.archive)],
+        actions: [CustomSwitch()],
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -34,5 +35,17 @@ class _BalancoMensalState extends State<BalancoMensal> {
       ),
       floatingActionButton: CustomFloatingButton(),
     );
+  }
+}
+
+class CustomSwitch extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Switch(
+        //Seria para trocar o tema no swtich
+        value: AppController.instance.isDarkTheme,
+        onChanged: (value) {
+          AppController.instance.changeTheme();
+        });
   }
 }
