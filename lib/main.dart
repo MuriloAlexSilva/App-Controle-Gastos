@@ -1,7 +1,15 @@
 import 'package:controle_gastos/controllers/app_controller.dart';
-import 'package:controle_gastos/pages/BalancoMensal.dart';
+import 'package:controle_gastos/pages/DespesasAdicionais.dart';
+import 'package:controle_gastos/pages/DespesasEssenciais.dart';
+import 'package:controle_gastos/pages/DespesasExtraordinarias.dart';
+import 'package:controle_gastos/pages/DespesasVariaveis.dart';
+import 'package:controle_gastos/pages/HomePage.dart';
+import 'package:controle_gastos/pages/Investimentos.dart';
 import 'package:controle_gastos/pages/Receitas.dart';
+
 import 'package:flutter/material.dart';
+
+import 'pages/LoginPage.dart';
 
 void main() {
   runApp(MyApp());
@@ -22,8 +30,18 @@ class MyApp extends StatelessWidget {
                 : Brightness.light, //Para mudar o formato do tema
             primarySwatch: Colors.teal,
           ),
-          home: BalancoMensal(),
           debugShowCheckedModeBanner: false,
+          initialRoute: "/home",
+          routes: {
+            "/": (context) => LoginPage(),
+            "/home": (context) => HomePage(),
+            "/receitas": (context) => Receitas(),
+            "/despesasEssenciais": (context) => DespesasEssenciais(),
+            "/despesasVariaveis": (context) => DespesasVariaveis(),
+            "/despesasExtraordinarias": (context) => DespesasExtraordinarias(),
+            "/despesasAdicionais": (context) => DespesasAdicionais(),
+            "/investimentos": (context) => Investimentos(),
+          },
         );
       },
     );

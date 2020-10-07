@@ -4,12 +4,12 @@ import 'package:controle_gastos/widgets/CustomDrawer.dart';
 import 'package:controle_gastos/widgets/CustomFloatingButton.dart';
 import 'package:flutter/material.dart';
 
-class BalancoMensal extends StatefulWidget {
+class HomePage extends StatefulWidget {
   @override
-  _BalancoMensalState createState() => _BalancoMensalState();
+  _HomePageState createState() => _HomePageState();
 }
 
-class _BalancoMensalState extends State<BalancoMensal> {
+class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,12 +24,21 @@ class _BalancoMensalState extends State<BalancoMensal> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            CustomContainer(title: "Receitas"),
-            CustomContainer(title: "Investimentos"),
-            CustomContainer(title: "Despesas Essenciais"),
-            CustomContainer(title: "Despesas Variáveis"),
-            CustomContainer(title: "Despesas Extraordinárias"),
-            CustomContainer(title: "Despesas Adicionais"),
+            CustomContainer(title: "Receitas", rotaCustomizada: "/receitas"),
+            CustomContainer(
+                title: "Investimentos", rotaCustomizada: "/investimentos"),
+            CustomContainer(
+                title: "Despesas Essenciais",
+                rotaCustomizada: "/despesasEssenciais"),
+            CustomContainer(
+                title: "Despesas Variáveis",
+                rotaCustomizada: "/despesasVariaveis"),
+            CustomContainer(
+                title: "Despesas Extraordinárias",
+                rotaCustomizada: "/despesasExtraordinarias"),
+            CustomContainer(
+                title: "Despesas Adicionais",
+                rotaCustomizada: "/despesasAdicionais"),
           ],
         ),
       ),

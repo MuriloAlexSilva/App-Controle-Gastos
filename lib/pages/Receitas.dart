@@ -1,3 +1,4 @@
+import 'package:controle_gastos/widgets/CustomContainer.dart';
 import 'package:controle_gastos/widgets/CustomDrawer.dart';
 import 'package:flutter/material.dart';
 
@@ -20,7 +21,13 @@ class _ReceitasState extends State<Receitas> {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [],
+          children: [
+            CustomContainer(title: "Salário Murio Dia 1: "),
+            CustomContainer(title: "Salário Camila: "),
+            CustomContainer(title: "Salário Murio Dia 15: "),
+            CustomContainer(title: "Extras (Escola e Turno) : "),
+            CustomContainer(title: "Outros: "),
+          ],
         ),
       ),
     );
