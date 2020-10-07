@@ -1,15 +1,15 @@
 import 'package:controle_gastos/controllers/app_controller.dart';
-import 'package:controle_gastos/pages/DespesasAdicionais.dart';
-import 'package:controle_gastos/pages/DespesasEssenciais.dart';
-import 'package:controle_gastos/pages/DespesasExtraordinarias.dart';
-import 'package:controle_gastos/pages/DespesasVariaveis.dart';
-import 'package:controle_gastos/pages/HomePage.dart';
-import 'package:controle_gastos/pages/Investimentos.dart';
-import 'package:controle_gastos/pages/Receitas.dart';
+import 'package:controle_gastos/pages/DespesasAdicionais/DespesasAdicionais.dart';
+import 'package:controle_gastos/pages/DespesasEssenciais/DespesasEssenciais.dart';
+import 'package:controle_gastos/pages/DespesasExtraordinarias/DespesasVariaveis/DespesasExtraordinarias.dart';
+import 'package:controle_gastos/pages/DespesasVariaveis/DespesasVariaveis.dart';
+import 'package:controle_gastos/pages/HomePage/HomePage.dart';
+import 'package:controle_gastos/pages/Investimentos/Investimentos.dart';
+import 'package:controle_gastos/pages/Receitas/Receitas.dart';
 
 import 'package:flutter/material.dart';
 
-import 'pages/LoginPage.dart';
+import 'pages/LoginPage/LoginPage.dart';
 
 void main() {
   runApp(MyApp());

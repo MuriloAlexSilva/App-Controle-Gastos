@@ -1,12 +1,12 @@
 import 'package:controle_gastos/widgets/CustomDrawer.dart';
 import 'package:flutter/material.dart';
 
-class DespesasVariaveis extends StatefulWidget {
+class DespesasEssenciais extends StatefulWidget {
   @override
-  _DespesasVariaveisState createState() => _DespesasVariaveisState();
+  _DespesasEssenciaisState createState() => _DespesasEssenciaisState();
 }
 
-class _DespesasVariaveisState extends State<DespesasVariaveis> {
+class _DespesasEssenciaisState extends State<DespesasEssenciais> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -14,9 +14,16 @@ class _DespesasVariaveisState extends State<DespesasVariaveis> {
       appBar: AppBar(
         centerTitle: true,
         title: Text(
-          "Despesas Variáveis",
+          "Despesas Essenciais",
         ),
         actions: [Icon(Icons.archive)],
+      ),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Card(),
+          ],
+        ),
       ),
     );
   }

@@ -1,3 +1,4 @@
+import 'package:controle_gastos/widgets/CustomContainer.dart';
 import 'package:controle_gastos/widgets/CustomDrawer.dart';
 import 'package:flutter/material.dart';
 
@@ -17,6 +18,17 @@ class _DespesasAdicionaisState extends State<DespesasAdicionais> {
           "Despesas Adicionais",
         ),
         actions: [Icon(Icons.archive)],
+      ),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            CustomContainer(title: "Salário Murio Dia 1: "),
+            CustomContainer(title: "Salário Camila: "),
+            CustomContainer(title: "Salário Murio Dia 15: "),
+            CustomContainer(title: "Extras (Escola e Turno) : "),
+            CustomContainer(title: "Outros: "),
+          ],
+        ),
       ),
     );
   }
