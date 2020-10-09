@@ -1,7 +1,7 @@
 import 'package:controle_gastos/controllers/app_controller.dart';
 import 'package:controle_gastos/pages/DespesasAdicionais/DespesasAdicionais.dart';
 import 'package:controle_gastos/pages/DespesasEssenciais/DespesasEssenciais.dart';
-import 'package:controle_gastos/pages/DespesasExtraordinarias/DespesasVariaveis/DespesasExtraordinarias.dart';
+import 'package:controle_gastos/pages/DespesasExtraordinarias/DespesasExtraordinarias.dart';
 import 'package:controle_gastos/pages/DespesasVariaveis/DespesasVariaveis.dart';
 import 'package:controle_gastos/pages/HomePage/HomePage.dart';
 import 'package:controle_gastos/pages/Investimentos/Investimentos.dart';

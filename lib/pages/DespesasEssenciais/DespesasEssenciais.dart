@@ -1,3 +1,4 @@
+import 'package:controle_gastos/pages/DespesasEssenciais/assets/PageModel.dart';
 import 'package:controle_gastos/widgets/CustomDrawer.dart';
 import 'package:flutter/material.dart';
 
@@ -18,12 +19,105 @@ class _DespesasEssenciaisState extends State<DespesasEssenciais> {
         ),
         actions: [Icon(Icons.archive)],
       ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            Card(),
-          ],
-        ),
+      body: PageView(
+        children: [
+          SingleChildScrollView(
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: PageModel(
+                mes: "Janeiro",
+              ),
+            ),
+          ),
+          SingleChildScrollView(
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: PageModel(
+                mes: "Fevereiro",
+              ),
+            ),
+          ),
+          SingleChildScrollView(
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: PageModel(
+                mes: "Março",
+              ),
+            ),
+          ),
+          SingleChildScrollView(
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: PageModel(
+                mes: "Abril",
+              ),
+            ),
+          ),
+          SingleChildScrollView(
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: PageModel(
+                mes: "Maio",
+              ),
+            ),
+          ),
+          SingleChildScrollView(
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: PageModel(
+                mes: "Junho",
+              ),
+            ),
+          ),
+          SingleChildScrollView(
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: PageModel(
+                mes: "Julho",
+              ),
+            ),
+          ),
+          SingleChildScrollView(
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: PageModel(
+                mes: "Agosto",
+              ),
+            ),
+          ),
+          SingleChildScrollView(
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: PageModel(
+                mes: "Setembro",
+              ),
+            ),
+          ),
+          SingleChildScrollView(
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: PageModel(
+                mes: "Outubro",
+              ),
+            ),
+          ),
+          SingleChildScrollView(
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: PageModel(
+                mes: "Novembro",
+              ),
+            ),
+          ),
+          SingleChildScrollView(
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: PageModel(
+                mes: "Dezembro",
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
