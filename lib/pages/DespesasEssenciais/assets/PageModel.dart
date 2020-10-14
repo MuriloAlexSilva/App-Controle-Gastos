@@ -83,6 +83,45 @@ class PageModel extends StatelessWidget {
               title: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Text(
+                  "Alimentação",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 20, fontStyle: FontStyle.italic),
+                ),
+              ),
+              subtitle: Padding(
+                padding: const EdgeInsets.only(bottom: 6.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 6.0),
+                      child: Text("Marmita: ", textAlign: TextAlign.start),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 6.0),
+                      child: Text("Mercado: ", textAlign: TextAlign.start),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 6.0),
+                      child: Text("Padaria: ", textAlign: TextAlign.start),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 6.0),
+                      child: Text("Diversos: ", textAlign: TextAlign.start),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ),
+        Center(
+          child: Card(
+            color: Colors.teal[100],
+            child: ListTile(
+              title: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text(
                   "Transporte",
                   textAlign: TextAlign.center,
                   style: TextStyle(fontSize: 20, fontStyle: FontStyle.italic),

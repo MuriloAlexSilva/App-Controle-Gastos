@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 
-class PageModelReceitas extends StatelessWidget {
-  final String mesReceita;
+class DespesasVariaveisModel extends StatelessWidget {
+  final String mesReceitaVariavel;
 
-  const PageModelReceitas({Key key, this.mesReceita}) : super(key: key);
+  const DespesasVariaveisModel({Key key, this.mesReceitaVariavel})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +18,7 @@ class PageModelReceitas extends StatelessWidget {
               children: [
                 Icon(Icons.arrow_back),
                 Text(
-                  mesReceita,
+                  mesReceitaVariavel,
                   style: TextStyle(fontSize: 20),
                 ),
                 Icon(Icons.arrow_forward)
@@ -31,7 +32,7 @@ class PageModelReceitas extends StatelessWidget {
                 title: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text(
-                    "Entradas",
+                    "Habitação",
                     textAlign: TextAlign.center,
                     style: TextStyle(fontSize: 20, fontStyle: FontStyle.italic),
                   ),
@@ -43,27 +44,15 @@ class PageModelReceitas extends StatelessWidget {
                     children: [
                       Padding(
                         padding: const EdgeInsets.only(bottom: 6.0),
-                        child: Text("Salário Murilo Dia 01: ",
-                            textAlign: TextAlign.start),
+                        child: Text("Diarista: ", textAlign: TextAlign.start),
                       ),
                       Padding(
                         padding: const EdgeInsets.only(bottom: 6.0),
-                        child: Text("Salário Camila: ",
-                            textAlign: TextAlign.start),
+                        child: Text("Manutenção: ", textAlign: TextAlign.start),
                       ),
                       Padding(
                         padding: const EdgeInsets.only(bottom: 6.0),
-                        child: Text("Salário Murilo Dia 15: ",
-                            textAlign: TextAlign.start),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(bottom: 6.0),
-                        child: Text("Extras (Escola e Turno): ",
-                            textAlign: TextAlign.start),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(bottom: 6.0),
-                        child: Text("Outros: ", textAlign: TextAlign.start),
+                        child: Text("Melhorias: ", textAlign: TextAlign.start),
                       ),
                     ],
                   ),
@@ -78,7 +67,7 @@ class PageModelReceitas extends StatelessWidget {
                 title: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text(
-                    "Fechamento Mensal",
+                    "Gastos Camila",
                     textAlign: TextAlign.center,
                     style: TextStyle(fontSize: 20, fontStyle: FontStyle.italic),
                   ),
@@ -90,27 +79,93 @@ class PageModelReceitas extends StatelessWidget {
                     children: [
                       Padding(
                         padding: const EdgeInsets.only(bottom: 6.0),
-                        child: Text("Entradas Mensais com Extras: ",
+                        child: Text("Cabelo: ", textAlign: TextAlign.start),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(bottom: 6.0),
+                        child: Text("Unha: ", textAlign: TextAlign.start),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(bottom: 6.0),
+                        child: Text("Roupas e Acessórios: ",
                             textAlign: TextAlign.start),
                       ),
                       Padding(
                         padding: const EdgeInsets.only(bottom: 6.0),
-                        child: Text("Entradas Mensais sem Extras: ",
+                        child:
+                            Text("Gastos Extras: ", textAlign: TextAlign.start),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          ),
+          Center(
+            child: Card(
+              color: Colors.teal[100],
+              child: ListTile(
+                title: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                    "Gastos Murilo",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(fontSize: 20, fontStyle: FontStyle.italic),
+                  ),
+                ),
+                subtitle: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(bottom: 6.0),
+                        child: Text("Cabelo: ", textAlign: TextAlign.start),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(bottom: 6.0),
+                        child: Text("Roupas e Acessórios: ",
                             textAlign: TextAlign.start),
                       ),
                       Padding(
                         padding: const EdgeInsets.only(bottom: 6.0),
-                        child: Text("Despesas Mensais: ",
-                            textAlign: TextAlign.start),
+                        child:
+                            Text("Gastos Extras: ", textAlign: TextAlign.start),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          ),
+          Center(
+            child: Card(
+              color: Colors.teal[100],
+              child: ListTile(
+                title: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                    "Gastos Muca",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(fontSize: 20, fontStyle: FontStyle.italic),
+                  ),
+                ),
+                subtitle: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(bottom: 6.0),
+                        child: Text("Pet: ", textAlign: TextAlign.start),
                       ),
                       Padding(
                         padding: const EdgeInsets.only(bottom: 6.0),
-                        child: Text("Sobra Mensal com Extras: ",
-                            textAlign: TextAlign.start),
+                        child: Text("Comida: ", textAlign: TextAlign.start),
                       ),
                       Padding(
                         padding: const EdgeInsets.only(bottom: 6.0),
-                        child: Text("Sobra Mensal sem Extras: ",
+                        child: Text("Brinquedos e Acessórios: ",
                             textAlign: TextAlign.start),
                       ),
                     ],

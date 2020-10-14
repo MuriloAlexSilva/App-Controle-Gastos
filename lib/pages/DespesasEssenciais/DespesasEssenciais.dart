@@ -23,99 +23,63 @@ class _DespesasEssenciaisState extends State<DespesasEssenciais> {
         children: [
           SingleChildScrollView(
             child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: PageModel(
-                mes: "Janeiro",
-              ),
-            ),
+                padding: const EdgeInsets.all(8.0),
+                child: PageModel(mes: "Janeiro")),
           ),
           SingleChildScrollView(
             child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: PageModel(
-                mes: "Fevereiro",
-              ),
-            ),
+                padding: const EdgeInsets.all(8.0),
+                child: PageModel(mes: "Fevereiro")),
           ),
           SingleChildScrollView(
             child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: PageModel(
-                mes: "Março",
-              ),
-            ),
+                padding: const EdgeInsets.all(8.0),
+                child: PageModel(mes: "Março")),
           ),
           SingleChildScrollView(
             child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: PageModel(
-                mes: "Abril",
-              ),
-            ),
+                padding: const EdgeInsets.all(8.0),
+                child: PageModel(mes: "Abril")),
           ),
           SingleChildScrollView(
             child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: PageModel(
-                mes: "Maio",
-              ),
-            ),
+                padding: const EdgeInsets.all(8.0),
+                child: PageModel(mes: "Maio")),
           ),
           SingleChildScrollView(
             child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: PageModel(
-                mes: "Junho",
-              ),
-            ),
+                padding: const EdgeInsets.all(8.0),
+                child: PageModel(mes: "Junho")),
           ),
           SingleChildScrollView(
             child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: PageModel(
-                mes: "Julho",
-              ),
-            ),
+                padding: const EdgeInsets.all(8.0),
+                child: PageModel(mes: "Julho")),
           ),
           SingleChildScrollView(
             child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: PageModel(
-                mes: "Agosto",
-              ),
-            ),
+                padding: const EdgeInsets.all(8.0),
+                child: PageModel(mes: "Agosto")),
           ),
           SingleChildScrollView(
             child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: PageModel(
-                mes: "Setembro",
-              ),
-            ),
+                padding: const EdgeInsets.all(8.0),
+                child: PageModel(mes: "Setembro")),
           ),
           SingleChildScrollView(
             child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: PageModel(
-                mes: "Outubro",
-              ),
-            ),
+                padding: const EdgeInsets.all(8.0),
+                child: PageModel(mes: "Outubro")),
           ),
           SingleChildScrollView(
             child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: PageModel(
-                mes: "Novembro",
-              ),
-            ),
+                padding: const EdgeInsets.all(8.0),
+                child: PageModel(mes: "Novembro")),
           ),
           SingleChildScrollView(
             child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: PageModel(
-                mes: "Dezembro",
-              ),
-            ),
+                padding: const EdgeInsets.all(8.0),
+                child: PageModel(mes: "Dezembro")),
           ),
         ],
       ),

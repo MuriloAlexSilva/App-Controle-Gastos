@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 
-class PageModelReceitas extends StatelessWidget {
-  final String mesReceita;
+class DespesasAdicionaisModel extends StatelessWidget {
+  final String mesReceitaAdicionais;
 
-  const PageModelReceitas({Key key, this.mesReceita}) : super(key: key);
+  const DespesasAdicionaisModel({Key key, this.mesReceitaAdicionais})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +18,7 @@ class PageModelReceitas extends StatelessWidget {
               children: [
                 Icon(Icons.arrow_back),
                 Text(
-                  mesReceita,
+                  mesReceitaAdicionais,
                   style: TextStyle(fontSize: 20),
                 ),
                 Icon(Icons.arrow_forward)
@@ -31,7 +32,7 @@ class PageModelReceitas extends StatelessWidget {
                 title: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text(
-                    "Entradas",
+                    "Lazer",
                     textAlign: TextAlign.center,
                     style: TextStyle(fontSize: 20, fontStyle: FontStyle.italic),
                   ),
@@ -43,27 +44,18 @@ class PageModelReceitas extends StatelessWidget {
                     children: [
                       Padding(
                         padding: const EdgeInsets.only(bottom: 6.0),
-                        child: Text("Salário Murilo Dia 01: ",
+                        child: Text("Viagens Internacionais: ",
                             textAlign: TextAlign.start),
                       ),
                       Padding(
                         padding: const EdgeInsets.only(bottom: 6.0),
-                        child: Text("Salário Camila: ",
+                        child: Text("Viagens Nacionais: ",
                             textAlign: TextAlign.start),
                       ),
                       Padding(
                         padding: const EdgeInsets.only(bottom: 6.0),
-                        child: Text("Salário Murilo Dia 15: ",
+                        child: Text("Restaurantes e bares: ",
                             textAlign: TextAlign.start),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(bottom: 6.0),
-                        child: Text("Extras (Escola e Turno): ",
-                            textAlign: TextAlign.start),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(bottom: 6.0),
-                        child: Text("Outros: ", textAlign: TextAlign.start),
                       ),
                     ],
                   ),
@@ -78,7 +70,7 @@ class PageModelReceitas extends StatelessWidget {
                 title: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text(
-                    "Fechamento Mensal",
+                    "Outros",
                     textAlign: TextAlign.center,
                     style: TextStyle(fontSize: 20, fontStyle: FontStyle.italic),
                   ),
@@ -90,28 +82,11 @@ class PageModelReceitas extends StatelessWidget {
                     children: [
                       Padding(
                         padding: const EdgeInsets.only(bottom: 6.0),
-                        child: Text("Entradas Mensais com Extras: ",
-                            textAlign: TextAlign.start),
+                        child: Text("Presentes: ", textAlign: TextAlign.start),
                       ),
                       Padding(
                         padding: const EdgeInsets.only(bottom: 6.0),
-                        child: Text("Entradas Mensais sem Extras: ",
-                            textAlign: TextAlign.start),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(bottom: 6.0),
-                        child: Text("Despesas Mensais: ",
-                            textAlign: TextAlign.start),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(bottom: 6.0),
-                        child: Text("Sobra Mensal com Extras: ",
-                            textAlign: TextAlign.start),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(bottom: 6.0),
-                        child: Text("Sobra Mensal sem Extras: ",
-                            textAlign: TextAlign.start),
+                        child: Text("Diversos: ", textAlign: TextAlign.start),
                       ),
                     ],
                   ),

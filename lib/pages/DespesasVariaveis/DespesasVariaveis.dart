@@ -1,4 +1,5 @@
-import 'package:controle_gastos/widgets/CustomContainer.dart';
+import 'package:controle_gastos/pages/DespesasVariaveis/assets/DespesasVariaveisModel.dart';
+
 import 'package:controle_gastos/widgets/CustomDrawer.dart';
 import 'package:flutter/material.dart';
 
@@ -19,16 +20,69 @@ class _DespesasVariaveisState extends State<DespesasVariaveis> {
         ),
         actions: [Icon(Icons.archive)],
       ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            CustomContainer(title: "Salário Murio Dia 1: "),
-            CustomContainer(title: "Salário Camila: "),
-            CustomContainer(title: "Salário Murio Dia 15: "),
-            CustomContainer(title: "Extras (Escola e Turno) : "),
-            CustomContainer(title: "Outros: "),
-          ],
-        ),
+      body: PageView(
+        children: [
+          SingleChildScrollView(
+            child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: DespesasVariaveisModel(mesReceitaVariavel: "Janeiro")),
+          ),
+          SingleChildScrollView(
+            child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: DespesasVariaveisModel(mesReceitaVariavel: "Fevereiro")),
+          ),
+          SingleChildScrollView(
+            child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: DespesasVariaveisModel(mesReceitaVariavel: "Março")),
+          ),
+          SingleChildScrollView(
+            child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: DespesasVariaveisModel(mesReceitaVariavel: "Abril")),
+          ),
+          SingleChildScrollView(
+            child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: DespesasVariaveisModel(mesReceitaVariavel: "Maio")),
+          ),
+          SingleChildScrollView(
+            child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: DespesasVariaveisModel(mesReceitaVariavel: "Junho")),
+          ),
+          SingleChildScrollView(
+            child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: DespesasVariaveisModel(mesReceitaVariavel: "Julho")),
+          ),
+          SingleChildScrollView(
+            child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: DespesasVariaveisModel(mesReceitaVariavel: "Agosto")),
+          ),
+          SingleChildScrollView(
+            child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: DespesasVariaveisModel(mesReceitaVariavel: "Setembro")),
+          ),
+          SingleChildScrollView(
+            child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: DespesasVariaveisModel(mesReceitaVariavel: "Outubro")),
+          ),
+          SingleChildScrollView(
+            child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: DespesasVariaveisModel(mesReceitaVariavel: "Novembro")),
+          ),
+          SingleChildScrollView(
+            child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: DespesasVariaveisModel(mesReceitaVariavel: "Dezembro")),
+          ),
+        ],
       ),
     );
   }

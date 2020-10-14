@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 
-class PageModelReceitas extends StatelessWidget {
-  final String mesReceita;
+class DespesasExtraordinariasModel extends StatelessWidget {
+  final String mesReceitaExtraordinaria;
 
-  const PageModelReceitas({Key key, this.mesReceita}) : super(key: key);
+  const DespesasExtraordinariasModel({Key key, this.mesReceitaExtraordinaria})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +18,7 @@ class PageModelReceitas extends StatelessWidget {
               children: [
                 Icon(Icons.arrow_back),
                 Text(
-                  mesReceita,
+                  mesReceitaExtraordinaria,
                   style: TextStyle(fontSize: 20),
                 ),
                 Icon(Icons.arrow_forward)
@@ -31,7 +32,7 @@ class PageModelReceitas extends StatelessWidget {
                 title: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text(
-                    "Entradas",
+                    "Saúde",
                     textAlign: TextAlign.center,
                     style: TextStyle(fontSize: 20, fontStyle: FontStyle.italic),
                   ),
@@ -43,27 +44,25 @@ class PageModelReceitas extends StatelessWidget {
                     children: [
                       Padding(
                         padding: const EdgeInsets.only(bottom: 6.0),
-                        child: Text("Salário Murilo Dia 01: ",
-                            textAlign: TextAlign.start),
+                        child: Text("Médico: ", textAlign: TextAlign.start),
                       ),
                       Padding(
                         padding: const EdgeInsets.only(bottom: 6.0),
-                        child: Text("Salário Camila: ",
-                            textAlign: TextAlign.start),
+                        child: Text("Vacinas: ", textAlign: TextAlign.start),
                       ),
                       Padding(
                         padding: const EdgeInsets.only(bottom: 6.0),
-                        child: Text("Salário Murilo Dia 15: ",
-                            textAlign: TextAlign.start),
+                        child: Text("Farmácia: ", textAlign: TextAlign.start),
                       ),
                       Padding(
                         padding: const EdgeInsets.only(bottom: 6.0),
-                        child: Text("Extras (Escola e Turno): ",
-                            textAlign: TextAlign.start),
+                        child:
+                            Text("veterinário: ", textAlign: TextAlign.start),
                       ),
                       Padding(
                         padding: const EdgeInsets.only(bottom: 6.0),
-                        child: Text("Outros: ", textAlign: TextAlign.start),
+                        child: Text("Vacinas e Medicamentos Muca: ",
+                            textAlign: TextAlign.start),
                       ),
                     ],
                   ),
@@ -78,7 +77,7 @@ class PageModelReceitas extends StatelessWidget {
                 title: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text(
-                    "Fechamento Mensal",
+                    "Manutenção e Prevenção",
                     textAlign: TextAlign.center,
                     style: TextStyle(fontSize: 20, fontStyle: FontStyle.italic),
                   ),
@@ -90,28 +89,44 @@ class PageModelReceitas extends StatelessWidget {
                     children: [
                       Padding(
                         padding: const EdgeInsets.only(bottom: 6.0),
-                        child: Text("Entradas Mensais com Extras: ",
-                            textAlign: TextAlign.start),
+                        child: Text("Carro: ", textAlign: TextAlign.start),
                       ),
                       Padding(
                         padding: const EdgeInsets.only(bottom: 6.0),
-                        child: Text("Entradas Mensais sem Extras: ",
-                            textAlign: TextAlign.start),
+                        child: Text("Casa: ", textAlign: TextAlign.start),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          ),
+          Center(
+            child: Card(
+              color: Colors.teal[100],
+              child: ListTile(
+                title: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                    "Educação",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(fontSize: 20, fontStyle: FontStyle.italic),
+                  ),
+                ),
+                subtitle: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(bottom: 6.0),
+                        child:
+                            Text("Cursos Camila: ", textAlign: TextAlign.start),
                       ),
                       Padding(
                         padding: const EdgeInsets.only(bottom: 6.0),
-                        child: Text("Despesas Mensais: ",
-                            textAlign: TextAlign.start),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(bottom: 6.0),
-                        child: Text("Sobra Mensal com Extras: ",
-                            textAlign: TextAlign.start),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(bottom: 6.0),
-                        child: Text("Sobra Mensal sem Extras: ",
-                            textAlign: TextAlign.start),
+                        child:
+                            Text("Cursos Murilo: ", textAlign: TextAlign.start),
                       ),
                     ],
                   ),
