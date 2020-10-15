@@ -42,7 +42,7 @@ class CustomDrawer extends StatelessWidget {
                 Navigator.of(context).pushNamed("/despesasVariaveis");
               }),
           ListTile(
-            title: Text("Despesas Extraordinárias"),
+            title: Text("Despesas Extras"),
             onTap: () {
               Navigator.of(context).pushNamed("/despesasExtraordinarias");
             },

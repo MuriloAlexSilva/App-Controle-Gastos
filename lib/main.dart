@@ -25,13 +25,14 @@ class MyApp extends StatelessWidget {
         return MaterialApp(
           title: 'Flutter Demo',
           theme: ThemeData(
+            fontFamily: 'Lobster',
             brightness: AppController.instance.isDarkTheme
                 ? Brightness.dark
                 : Brightness.light, //Para mudar o formato do tema
             primarySwatch: Colors.teal,
           ),
           debugShowCheckedModeBanner: false,
-          initialRoute: "/home",
+          initialRoute: "/",
           routes: {
             "/": (context) => LoginPage(),
             "/home": (context) => HomePage(),

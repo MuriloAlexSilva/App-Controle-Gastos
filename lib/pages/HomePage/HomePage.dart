@@ -1,8 +1,10 @@
 import 'package:controle_gastos/controllers/app_controller.dart';
+import 'package:controle_gastos/pages/HomePage/assets/CardCustom.dart';
 import 'package:controle_gastos/widgets/CustomContainer.dart';
 import 'package:controle_gastos/widgets/CustomDrawer.dart';
 import 'package:controle_gastos/widgets/CustomFloatingButton.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -24,25 +26,33 @@ class _HomePageState extends State<HomePage> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            CustomContainer(title: "Receitas", rotaCustomizada: "/receitas"),
-            CustomContainer(
-                title: "Investimentos", rotaCustomizada: "/investimentos"),
-            CustomContainer(
-                title: "Despesas Essenciais",
-                rotaCustomizada: "/despesasEssenciais"),
-            CustomContainer(
-                title: "Despesas Variáveis",
-                rotaCustomizada: "/despesasVariaveis"),
-            CustomContainer(
-                title: "Despesas Extraordinárias",
-                rotaCustomizada: "/despesasExtraordinarias"),
-            CustomContainer(
-                title: "Despesas Adicionais",
-                rotaCustomizada: "/despesasAdicionais"),
+            CardCustom(
+              texto1: "Receitas",
+              icone1: Icons.monetization_on,
+              rotaCustomizada1: "/receitas",
+              texto2: "Investimentos",
+              icone2: Icons.business_center,
+              rotaCustomizada2: "/investimentos",
+            ),
+            CardCustom(
+              texto1: "Despesas Essenciais",
+              icone1: Icons.add_shopping_cart,
+              rotaCustomizada1: "/despesasEssenciais",
+              texto2: "Despesas Variáveis",
+              icone2: Icons.accessibility_new,
+              rotaCustomizada2: "/despesasVariaveis",
+            ),
+            CardCustom(
+              texto1: "Despesas Extras",
+              icone1: Icons.android,
+              rotaCustomizada1: "/despesasExtraordinarias",
+              texto2: "Despesas Adicionais",
+              icone2: Icons.card_travel,
+              rotaCustomizada2: "/despesasAdicionais",
+            ),
           ],
         ),
       ),
-      floatingActionButton: CustomFloatingButton(),
     );
   }
 }

@@ -17,7 +17,7 @@ class _DespesasExtraordinariasState extends State<DespesasExtraordinarias> {
       appBar: AppBar(
         centerTitle: true,
         title: Text(
-          "Despesas Extraordinárias",
+          "Despesas Extras",
         ),
         actions: [Icon(Icons.archive)],
       ),
