@@ -57,9 +57,7 @@ class CardCustom extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(
-            width: 20,
-          ),
+          SizedBox(),
           InkWell(
             onTap: () {
               Navigator.of(context).pushNamed("$rotaCustomizada2");

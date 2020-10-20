@@ -1,10 +1,9 @@
 import 'package:controle_gastos/controllers/app_controller.dart';
 import 'package:controle_gastos/pages/HomePage/assets/CardCustom.dart';
-import 'package:controle_gastos/widgets/CustomContainer.dart';
+
 import 'package:controle_gastos/widgets/CustomDrawer.dart';
-import 'package:controle_gastos/widgets/CustomFloatingButton.dart';
+
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -53,6 +52,7 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
       ),
+      floatingActionButton: FloatingActionButton(onPressed: null),
     );
   }
 }
