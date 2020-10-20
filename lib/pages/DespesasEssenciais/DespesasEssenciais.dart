@@ -1,5 +1,7 @@
 import 'package:controle_gastos/pages/DespesasEssenciais/assets/PageModel.dart';
+import 'package:controle_gastos/widgets/CustomBottomAppBar.dart';
 import 'package:controle_gastos/widgets/CustomDrawer.dart';
+import 'package:controle_gastos/widgets/CustomFloatingButton.dart';
 import 'package:flutter/material.dart';
 
 class DespesasEssenciais extends StatefulWidget {
@@ -83,6 +85,9 @@ class _DespesasEssenciaisState extends State<DespesasEssenciais> {
           ),
         ],
       ),
+      floatingActionButton: CustomFloatingButton(),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      bottomNavigationBar: CustomBottomAppBar(),
     );
   }
 }

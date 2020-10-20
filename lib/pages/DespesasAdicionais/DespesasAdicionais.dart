@@ -1,6 +1,8 @@
 import 'package:controle_gastos/pages/DespesasAdicionais/assets/DespesasAdicionaisModel.dart';
+import 'package:controle_gastos/widgets/CustomBottomAppBar.dart';
 import 'package:controle_gastos/widgets/CustomContainer.dart';
 import 'package:controle_gastos/widgets/CustomDrawer.dart';
+import 'package:controle_gastos/widgets/CustomFloatingButton.dart';
 import 'package:flutter/material.dart';
 
 class DespesasAdicionais extends StatefulWidget {
@@ -90,6 +92,9 @@ class _DespesasAdicionaisState extends State<DespesasAdicionais> {
           ),
         ],
       ),
+      floatingActionButton: CustomFloatingButton(),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      bottomNavigationBar: CustomBottomAppBar(),
     );
   }
 }

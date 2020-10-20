@@ -1,6 +1,8 @@
 import 'package:controle_gastos/pages/DespesasExtraordinarias/assets/DespesasExtraordinariasModel.dart';
+import 'package:controle_gastos/widgets/CustomBottomAppBar.dart';
 
 import 'package:controle_gastos/widgets/CustomDrawer.dart';
+import 'package:controle_gastos/widgets/CustomFloatingButton.dart';
 import 'package:flutter/material.dart';
 
 class DespesasExtraordinarias extends StatefulWidget {
@@ -97,6 +99,9 @@ class _DespesasExtraordinariasState extends State<DespesasExtraordinarias> {
           ),
         ],
       ),
+      floatingActionButton: CustomFloatingButton(),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      bottomNavigationBar: CustomBottomAppBar(),
     );
   }
 }

@@ -1,6 +1,8 @@
 import 'package:controle_gastos/pages/DespesasVariaveis/assets/DespesasVariaveisModel.dart';
+import 'package:controle_gastos/widgets/CustomBottomAppBar.dart';
 
 import 'package:controle_gastos/widgets/CustomDrawer.dart';
+import 'package:controle_gastos/widgets/CustomFloatingButton.dart';
 import 'package:flutter/material.dart';
 
 class DespesasVariaveis extends StatefulWidget {
@@ -84,6 +86,9 @@ class _DespesasVariaveisState extends State<DespesasVariaveis> {
           ),
         ],
       ),
+      floatingActionButton: CustomFloatingButton(),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      bottomNavigationBar: CustomBottomAppBar(),
     );
   }
 }

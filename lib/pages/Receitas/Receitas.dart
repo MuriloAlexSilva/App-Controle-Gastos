@@ -1,6 +1,8 @@
 import 'package:controle_gastos/pages/Receitas/assets/PageModelReceitas.dart';
+import 'package:controle_gastos/widgets/CustomBottomAppBar.dart';
 import 'package:controle_gastos/widgets/CustomContainer.dart';
 import 'package:controle_gastos/widgets/CustomDrawer.dart';
+import 'package:controle_gastos/widgets/CustomFloatingButton.dart';
 import 'package:flutter/material.dart';
 
 class Receitas extends StatefulWidget {
@@ -36,6 +38,9 @@ class _ReceitasState extends State<Receitas> {
           PageModelReceitas(mesReceita: "Dezembro"),
         ],
       ),
+      floatingActionButton: CustomFloatingButton(),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      bottomNavigationBar: CustomBottomAppBar(),
     );
   }
 }

@@ -26,7 +26,7 @@ class PageModelReceitas extends StatelessWidget {
           ),
           Center(
             child: Card(
-              color: Colors.teal[100],
+              color: Colors.white70,
               child: ListTile(
                 title: Padding(
                   padding: const EdgeInsets.all(8.0),
@@ -73,7 +73,7 @@ class PageModelReceitas extends StatelessWidget {
           ),
           Center(
             child: Card(
-              color: Colors.teal[100],
+              color: Colors.white70,
               child: ListTile(
                 title: Padding(
                   padding: const EdgeInsets.all(8.0),

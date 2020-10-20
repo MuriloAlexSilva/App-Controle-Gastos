@@ -5,7 +5,10 @@ class CustomFloatingButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return FloatingActionButton(
       onPressed: null,
-      child: Icon(Icons.add),
+      child: Icon(
+        Icons.add,
+        size: 30,
+      ),
     );
   }
 }
