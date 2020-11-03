@@ -1,3 +1,4 @@
+import 'package:controle_gastos/widgets/RowCustom.dart';
 import 'package:flutter/material.dart';
 
 class PageModel extends StatelessWidget {
@@ -40,36 +41,16 @@ class PageModel extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Padding(
-                      padding: const EdgeInsets.only(bottom: 6.0),
-                      child: Text("Apartamento Novo: ",
-                          textAlign: TextAlign.start),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(bottom: 6.0),
-                      child: Text("Prestação Apartamento: ",
-                          textAlign: TextAlign.start),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(bottom: 6.0),
-                      child: Text("Condomínio: ", textAlign: TextAlign.start),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(bottom: 6.0),
-                      child: Text("Luz: ", textAlign: TextAlign.start),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(bottom: 6.0),
-                      child: Text("Internet: ", textAlign: TextAlign.start),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(bottom: 6.0),
-                      child: Text("Gás: ", textAlign: TextAlign.start),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(bottom: 6.0),
-                      child: Text("Celular: ", textAlign: TextAlign.start),
-                    ),
+                    RowCustom(
+                        descricao: "Apartamento Novo:", valor: "R\$1.000,00"),
+                    RowCustom(
+                        descricao: "Prestação Apartamento:",
+                        valor: "R\$1.000,00"),
+                    RowCustom(descricao: "Condomínio:", valor: "R\$1.000,00"),
+                    RowCustom(descricao: "Luz:", valor: "R\$1.000,00"),
+                    RowCustom(descricao: "Internet:", valor: "R\$1.000,00"),
+                    RowCustom(descricao: "Gás:", valor: "R\$1.000,00"),
+                    RowCustom(descricao: "Celular:", valor: "R\$1.000,00"),
                   ],
                 ),
               ),
@@ -93,22 +74,10 @@ class PageModel extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Padding(
-                      padding: const EdgeInsets.only(bottom: 6.0),
-                      child: Text("Marmita: ", textAlign: TextAlign.start),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(bottom: 6.0),
-                      child: Text("Mercado: ", textAlign: TextAlign.start),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(bottom: 6.0),
-                      child: Text("Padaria: ", textAlign: TextAlign.start),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(bottom: 6.0),
-                      child: Text("Diversos: ", textAlign: TextAlign.start),
-                    ),
+                    RowCustom(descricao: "Marmita:", valor: "R\$1.000,00"),
+                    RowCustom(descricao: "Mercado:", valor: "R\$1.000,00"),
+                    RowCustom(descricao: "Padaria:", valor: "R\$1.000,00"),
+                    RowCustom(descricao: "Diversos:", valor: "R\$1.000,00"),
                   ],
                 ),
               ),
@@ -132,22 +101,11 @@ class PageModel extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Padding(
-                      padding: const EdgeInsets.only(bottom: 6.0),
-                      child: Text("Posto: ", textAlign: TextAlign.start),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(bottom: 6.0),
-                      child: Text("Pedágio: ", textAlign: TextAlign.start),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(bottom: 6.0),
-                      child: Text("Manutenção: ", textAlign: TextAlign.start),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(bottom: 6.0),
-                      child: Text("Seguro: ", textAlign: TextAlign.start),
-                    ),
+                    RowCustom(descricao: "Posto:", valor: "R\$1.000,00"),
+                    RowCustom(descricao: "Pedágio:", valor: "R\$1.000,00"),
+                    RowCustom(descricao: "Manutenção:", valor: "R\$1.000,00"),
+                    RowCustom(descricao: "Seguro:", valor: "R\$1.000,00"),
+                    RowCustom(descricao: "Posto:", valor: "R\$1.000,00"),
                   ],
                 ),
               ),
@@ -171,19 +129,10 @@ class PageModel extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Padding(
-                      padding: const EdgeInsets.only(bottom: 6.0),
-                      child: Text("IPTU: ", textAlign: TextAlign.start),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(bottom: 6.0),
-                      child:
-                          Text("Documentações: ", textAlign: TextAlign.start),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(bottom: 6.0),
-                      child: Text("IPVA: ", textAlign: TextAlign.start),
-                    ),
+                    RowCustom(descricao: "IPTU:", valor: "R\$1.000,00"),
+                    RowCustom(
+                        descricao: "Documentações:", valor: "R\$1.000,00"),
+                    RowCustom(descricao: "IPVA:", valor: "R\$1.000,00"),
                   ],
                 ),
               ),
@@ -207,10 +156,7 @@ class PageModel extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Padding(
-                      padding: const EdgeInsets.only(bottom: 6.0),
-                      child: Text("Academia: ", textAlign: TextAlign.start),
-                    ),
+                    RowCustom(descricao: "Academia:", valor: "R\$1.000,00"),
                   ],
                 ),
               ),

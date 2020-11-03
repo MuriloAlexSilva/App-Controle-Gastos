@@ -1,3 +1,4 @@
+import 'package:controle_gastos/widgets/RowCustom.dart';
 import 'package:flutter/material.dart';
 
 class DespesasExtraordinariasModel extends StatelessWidget {
@@ -42,28 +43,13 @@ class DespesasExtraordinariasModel extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.only(bottom: 6.0),
-                        child: Text("Médico: ", textAlign: TextAlign.start),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(bottom: 6.0),
-                        child: Text("Vacinas: ", textAlign: TextAlign.start),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(bottom: 6.0),
-                        child: Text("Farmácia: ", textAlign: TextAlign.start),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(bottom: 6.0),
-                        child:
-                            Text("veterinário: ", textAlign: TextAlign.start),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(bottom: 6.0),
-                        child: Text("Vacinas e Medicamentos Muca: ",
-                            textAlign: TextAlign.start),
-                      ),
+                      RowCustom(descricao: "Médico", valor: "R\$ 100,00"),
+                      RowCustom(descricao: "VAcinas", valor: "R\$ 100,00"),
+                      RowCustom(descricao: "Farmácia", valor: "R\$ 100,00"),
+                      RowCustom(descricao: "Veterinário", valor: "R\$ 100,00"),
+                      RowCustom(
+                          descricao: "Vacinas e Medicamentos Muca",
+                          valor: "R\$ 100,00"),
                     ],
                   ),
                 ),
@@ -87,14 +73,8 @@ class DespesasExtraordinariasModel extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.only(bottom: 6.0),
-                        child: Text("Carro: ", textAlign: TextAlign.start),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(bottom: 6.0),
-                        child: Text("Casa: ", textAlign: TextAlign.start),
-                      ),
+                      RowCustom(descricao: "Carro", valor: "R\$ 100,00"),
+                      RowCustom(descricao: "Casa", valor: "R\$ 100,00"),
                     ],
                   ),
                 ),
@@ -118,16 +98,10 @@ class DespesasExtraordinariasModel extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.only(bottom: 6.0),
-                        child:
-                            Text("Cursos Camila: ", textAlign: TextAlign.start),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(bottom: 6.0),
-                        child:
-                            Text("Cursos Murilo: ", textAlign: TextAlign.start),
-                      ),
+                      RowCustom(
+                          descricao: "Cursos Camila", valor: "R\$ 100,00"),
+                      RowCustom(
+                          descricao: "Cursos Murilo", valor: "R\$ 100,00"),
                     ],
                   ),
                 ),

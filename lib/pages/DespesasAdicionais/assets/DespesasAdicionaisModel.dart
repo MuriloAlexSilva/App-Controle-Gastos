@@ -1,3 +1,4 @@
+import 'package:controle_gastos/widgets/RowCustom.dart';
 import 'package:flutter/material.dart';
 
 class DespesasAdicionaisModel extends StatelessWidget {
@@ -42,21 +43,14 @@ class DespesasAdicionaisModel extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.only(bottom: 6.0),
-                        child: Text("Viagens Internacionais: ",
-                            textAlign: TextAlign.start),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(bottom: 6.0),
-                        child: Text("Viagens Nacionais: ",
-                            textAlign: TextAlign.start),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(bottom: 6.0),
-                        child: Text("Restaurantes e bares: ",
-                            textAlign: TextAlign.start),
-                      ),
+                      RowCustom(
+                          descricao: "Viagens Internacionais",
+                          valor: "R\$ 100,00"),
+                      RowCustom(
+                          descricao: "Viagens Nacionais", valor: "R\$ 100,00"),
+                      RowCustom(
+                          descricao: "Restaurantes e bares",
+                          valor: "R\$ 100,00"),
                     ],
                   ),
                 ),
@@ -80,14 +74,8 @@ class DespesasAdicionaisModel extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.only(bottom: 6.0),
-                        child: Text("Presentes: ", textAlign: TextAlign.start),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(bottom: 6.0),
-                        child: Text("Diversos: ", textAlign: TextAlign.start),
-                      ),
+                      RowCustom(descricao: "Presentes", valor: "R\$ 100,00"),
+                      RowCustom(descricao: "Diversos", valor: "R\$ 100,00"),
                     ],
                   ),
                 ),

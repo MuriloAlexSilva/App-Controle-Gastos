@@ -1,3 +1,4 @@
+import 'package:controle_gastos/widgets/RowCustom.dart';
 import 'package:flutter/material.dart';
 
 class DespesasVariaveisModel extends StatelessWidget {
@@ -42,18 +43,9 @@ class DespesasVariaveisModel extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.only(bottom: 6.0),
-                        child: Text("Diarista: ", textAlign: TextAlign.start),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(bottom: 6.0),
-                        child: Text("Manutenção: ", textAlign: TextAlign.start),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(bottom: 6.0),
-                        child: Text("Melhorias: ", textAlign: TextAlign.start),
-                      ),
+                      RowCustom(descricao: "Diarista", valor: "R\$ 100,00"),
+                      RowCustom(descricao: "Manutenção", valor: "R\$ 100,00"),
+                      RowCustom(descricao: "Melhorias", valor: "R\$ 100,00"),
                     ],
                   ),
                 ),
@@ -77,24 +69,13 @@ class DespesasVariaveisModel extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.only(bottom: 6.0),
-                        child: Text("Cabelo: ", textAlign: TextAlign.start),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(bottom: 6.0),
-                        child: Text("Unha: ", textAlign: TextAlign.start),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(bottom: 6.0),
-                        child: Text("Roupas e Acessórios: ",
-                            textAlign: TextAlign.start),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(bottom: 6.0),
-                        child:
-                            Text("Gastos Extras: ", textAlign: TextAlign.start),
-                      ),
+                      RowCustom(descricao: "Cabelo", valor: "R\$ 100,00"),
+                      RowCustom(descricao: "Unha", valor: "R\$ 100,00"),
+                      RowCustom(
+                          descricao: "Roupas e Acessórios",
+                          valor: "R\$ 100,00"),
+                      RowCustom(
+                          descricao: "Gastos Extras", valor: "R\$ 100,00"),
                     ],
                   ),
                 ),
@@ -118,20 +99,12 @@ class DespesasVariaveisModel extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.only(bottom: 6.0),
-                        child: Text("Cabelo: ", textAlign: TextAlign.start),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(bottom: 6.0),
-                        child: Text("Roupas e Acessórios: ",
-                            textAlign: TextAlign.start),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(bottom: 6.0),
-                        child:
-                            Text("Gastos Extras: ", textAlign: TextAlign.start),
-                      ),
+                      RowCustom(descricao: "Cabelo", valor: "R\$ 100,00"),
+                      RowCustom(
+                          descricao: "Roupas e Acessórios",
+                          valor: "R\$ 100,00"),
+                      RowCustom(
+                          descricao: "Gastos Extras", valor: "R\$ 100,00"),
                     ],
                   ),
                 ),
@@ -155,19 +128,11 @@ class DespesasVariaveisModel extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.only(bottom: 6.0),
-                        child: Text("Pet: ", textAlign: TextAlign.start),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(bottom: 6.0),
-                        child: Text("Comida: ", textAlign: TextAlign.start),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(bottom: 6.0),
-                        child: Text("Brinquedos e Acessórios: ",
-                            textAlign: TextAlign.start),
-                      ),
+                      RowCustom(descricao: "Pet", valor: "R\$ 100,00"),
+                      RowCustom(descricao: "Comida", valor: "R\$ 100,00"),
+                      RowCustom(
+                          descricao: "Brinquedos e Acessórios",
+                          valor: "R\$ 100,00"),
                     ],
                   ),
                 ),

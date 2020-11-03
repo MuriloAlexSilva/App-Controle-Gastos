@@ -6,9 +6,11 @@ class CustomDrawer extends StatelessWidget {
     return Drawer(
       child: ListView(
         children: [
-          SizedBox(
-            height: 50,
-          ),
+          UserAccountsDrawerHeader(
+              margin: EdgeInsets.all(10),
+              currentAccountPicture: CircleAvatar(),
+              accountName: Text("Murilo Silva"),
+              accountEmail: Text("murilosilva@gggg.com.br")),
           ListTile(
             title: Text("Home Page"),
             leading: Icon(Icons.account_balance),

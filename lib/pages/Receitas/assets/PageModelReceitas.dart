@@ -1,3 +1,4 @@
+import 'package:controle_gastos/widgets/RowCustom.dart';
 import 'package:flutter/material.dart';
 
 class PageModelReceitas extends StatelessWidget {
@@ -41,30 +42,18 @@ class PageModelReceitas extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.only(bottom: 6.0),
-                        child: Text("Salário Murilo Dia 01: ",
-                            textAlign: TextAlign.start),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(bottom: 6.0),
-                        child: Text("Salário Camila: ",
-                            textAlign: TextAlign.start),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(bottom: 6.0),
-                        child: Text("Salário Murilo Dia 15: ",
-                            textAlign: TextAlign.start),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(bottom: 6.0),
-                        child: Text("Extras (Escola e Turno): ",
-                            textAlign: TextAlign.start),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(bottom: 6.0),
-                        child: Text("Outros: ", textAlign: TextAlign.start),
-                      ),
+                      RowCustom(
+                          descricao: "Salário Murilo Dia 01:",
+                          valor: "R\$1.000,00"),
+                      RowCustom(
+                          descricao: "Salário Camila:", valor: "R\$1.000,00"),
+                      RowCustom(
+                          descricao: "Salário Murilo Dia 15:",
+                          valor: "R\$1.000,00"),
+                      RowCustom(
+                          descricao: "Extras (Escola e Turno):",
+                          valor: "R\$1.000,00"),
+                      RowCustom(descricao: "Outros:", valor: "R\$1.000,00"),
                     ],
                   ),
                 ),
@@ -88,31 +77,20 @@ class PageModelReceitas extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.only(bottom: 6.0),
-                        child: Text("Entradas Mensais com Extras: ",
-                            textAlign: TextAlign.start),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(bottom: 6.0),
-                        child: Text("Entradas Mensais sem Extras: ",
-                            textAlign: TextAlign.start),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(bottom: 6.0),
-                        child: Text("Despesas Mensais: ",
-                            textAlign: TextAlign.start),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(bottom: 6.0),
-                        child: Text("Sobra Mensal com Extras: ",
-                            textAlign: TextAlign.start),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(bottom: 6.0),
-                        child: Text("Sobra Mensal sem Extras: ",
-                            textAlign: TextAlign.start),
-                      ),
+                      RowCustom(
+                          descricao: "Entradas Mensais sem Extras:",
+                          valor: "R\$1.000,00"),
+                      RowCustom(
+                          descricao: "Entradas Mensais com Extras:",
+                          valor: "R\$1.000,00"),
+                      RowCustom(
+                          descricao: "Despesas Mensais:", valor: "R\$1.000,00"),
+                      RowCustom(
+                          descricao: "Sobra Mensal sem Extras:",
+                          valor: "R\$1.000,00"),
+                      RowCustom(
+                          descricao: "Sobra Mensal com Extras:",
+                          valor: "R\$1.000,00"),
                     ],
                   ),
                 ),
