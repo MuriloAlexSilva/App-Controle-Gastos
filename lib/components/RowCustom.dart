@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
 
-class RowCustom extends StatelessWidget {
-  final String descricao;
-  final String valor;
+class RowCustom extends StatefulWidget {
+  @override
+  _RowCustomState createState() => _RowCustomState();
+}
 
-  const RowCustom({Key key, this.descricao, this.valor}) : super(key: key);
+class _RowCustomState extends State<RowCustom> {
+  final String descricao;
+  final double valor;
+
+  _RowCustomState({this.descricao, this.valor});
 
   @override
   Widget build(BuildContext context) {
@@ -13,8 +18,8 @@ class RowCustom extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Text(descricao),
-          Text(valor),
+          Text(descricao ?? ''),
+          Text(valor.toString() ?? ''),
         ],
       ),
     );

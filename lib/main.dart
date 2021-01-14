@@ -30,7 +30,9 @@ class MyApp extends StatelessWidget {
                 ? Brightness.dark
                 : Brightness.light, //Para mudar o formato do tema
             primarySwatch: Colors.teal,
-            bottomAppBarColor: Colors.teal,
+            bottomAppBarColor: AppController.instance.isDarkTheme
+                ? Colors.grey[900]
+                : Colors.teal,
           ),
           debugShowCheckedModeBanner: false,
           initialRoute: "/",

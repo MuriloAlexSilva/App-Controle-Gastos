@@ -1,8 +1,7 @@
-import 'package:controle_gastos/pages/Receitas/assets/PageModelReceitas.dart';
-import 'package:controle_gastos/widgets/CustomBottomAppBar.dart';
-import 'package:controle_gastos/widgets/CustomContainer.dart';
-import 'package:controle_gastos/widgets/CustomDrawer.dart';
-import 'package:controle_gastos/widgets/CustomFloatingButton.dart';
+import 'package:controle_gastos/components/CustomBottomAppBar.dart';
+import 'package:controle_gastos/components/CustomDrawer.dart';
+import 'package:controle_gastos/components/CustomFloatingButton.dart';
+
 import 'package:flutter/material.dart';
 
 class Receitas extends StatefulWidget {
@@ -24,18 +23,18 @@ class _ReceitasState extends State<Receitas> {
       ),
       body: PageView(
         children: [
-          PageModelReceitas(mesReceita: "Janeiro"),
-          PageModelReceitas(mesReceita: "Fevereiro"),
-          PageModelReceitas(mesReceita: "Março"),
-          PageModelReceitas(mesReceita: "Abril"),
-          PageModelReceitas(mesReceita: "Maio"),
-          PageModelReceitas(mesReceita: "Junho"),
-          PageModelReceitas(mesReceita: "Julho"),
-          PageModelReceitas(mesReceita: "Agosto"),
-          PageModelReceitas(mesReceita: "Setembro"),
-          PageModelReceitas(mesReceita: "Outubro"),
-          PageModelReceitas(mesReceita: "Novembro"),
-          PageModelReceitas(mesReceita: "Dezembro"),
+          // PageModelReceitas(mesReceita: "Janeiro"),
+          // PageModelReceitas(mesReceita: "Fevereiro"),
+          // PageModelReceitas(mesReceita: "Março"),
+          // PageModelReceitas(mesReceita: "Abril"),
+          // PageModelReceitas(mesReceita: "Maio"),
+          // PageModelReceitas(mesReceita: "Junho"),
+          // PageModelReceitas(mesReceita: "Julho"),
+          // PageModelReceitas(mesReceita: "Agosto"),
+          // PageModelReceitas(mesReceita: "Setembro"),
+          // PageModelReceitas(mesReceita: "Outubro"),
+          // PageModelReceitas(mesReceita: "Novembro"),
+          // PageModelReceitas(mesReceita: "Dezembro"),
         ],
       ),
       floatingActionButton: CustomFloatingButton(),

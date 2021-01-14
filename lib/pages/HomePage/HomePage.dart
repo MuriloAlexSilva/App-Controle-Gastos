@@ -1,8 +1,8 @@
+import 'package:controle_gastos/components/CustomBottomAppBar.dart';
+import 'package:controle_gastos/components/CustomDrawer.dart';
+import 'package:controle_gastos/components/CustomFloatingButton.dart';
 import 'package:controle_gastos/controllers/app_controller.dart';
 import 'package:controle_gastos/pages/HomePage/assets/CardCustom.dart';
-import 'package:controle_gastos/widgets/CustomBottomAppBar.dart';
-import 'package:controle_gastos/widgets/CustomDrawer.dart';
-import 'package:controle_gastos/widgets/CustomFloatingButton.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
