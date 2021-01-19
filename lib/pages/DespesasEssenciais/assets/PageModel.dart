@@ -1,29 +1,18 @@
 import 'package:controle_gastos/components/ColumnCustom.dart';
+import 'package:controle_gastos/models/transacao.dart';
 import 'package:flutter/material.dart';
 
 class PageModel extends StatefulWidget {
-  final String mes;
-  final String titulo1;
-  final String titulo2;
-  final String titulo3;
-  final String titulo4;
-  final String titulo5;
-
-  const PageModel(
-      {Key key,
-      this.mes,
-      this.titulo1,
-      this.titulo2,
-      this.titulo3,
-      this.titulo4,
-      this.titulo5})
-      : super(key: key);
-
   @override
   _PageModelState createState() => _PageModelState();
 }
 
 class _PageModelState extends State<PageModel> {
+  final String topico;
+  final Transacao transacao;
+
+  _PageModelState({this.topico, this.transacao});
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -35,7 +24,7 @@ class _PageModelState extends State<PageModel> {
             children: [
               Icon(Icons.arrow_back),
               Text(
-                widget.mes,
+                "mes: ${transacao.mes}",
                 style: TextStyle(fontSize: 20),
               ),
               Icon(Icons.arrow_forward)
@@ -49,29 +38,14 @@ class _PageModelState extends State<PageModel> {
               title: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Text(
-                  widget.titulo1,
+                  topico,
                   textAlign: TextAlign.center,
                   style: TextStyle(fontSize: 20, fontStyle: FontStyle.italic),
                 ),
               ),
               subtitle: Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: ColumnCustom(
-                  descricao1: "Apartamento Novo:",
-                  valor1: 1000,
-                  descricao2: "Apartamento:",
-                  valor2: 1000,
-                  descricao3: "Condominio",
-                  valor3: 1000,
-                  descricao4: "Luz",
-                  valor4: 1000,
-                  descricao5: "Internet",
-                  valor5: 1000,
-                  descricao6: "Gás",
-                  valor6: 1000,
-                  descricao7: "Celular",
-                  valor7: 1000,
-                ),
+                child: ColumnCustom(),
               ),
             ),
           ),

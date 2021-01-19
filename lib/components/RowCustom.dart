@@ -1,15 +1,10 @@
+import 'package:controle_gastos/models/transacao.dart';
 import 'package:flutter/material.dart';
 
-class RowCustom extends StatefulWidget {
-  @override
-  _RowCustomState createState() => _RowCustomState();
-}
+class RowCustom extends StatelessWidget {
+  final Transacao transacao;
 
-class _RowCustomState extends State<RowCustom> {
-  final String descricao;
-  final double valor;
-
-  _RowCustomState({this.descricao, this.valor});
+  const RowCustom({Key key, this.transacao}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -18,8 +13,8 @@ class _RowCustomState extends State<RowCustom> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Text(descricao ?? ''),
-          Text(valor.toString() ?? ''),
+          Text("descricao: ${transacao.descricao}"),
+          Text("valor: ${transacao.valor}"),
         ],
       ),
     );
