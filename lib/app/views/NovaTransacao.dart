@@ -1,5 +1,6 @@
 import 'package:controle_gastos/app/components/CustomBottomAppBar.dart';
 import 'package:controle_gastos/app/components/CustomDrawer.dart';
+
 import 'package:flutter/material.dart';
 
 class NovaTransacao extends StatelessWidget {
@@ -14,9 +15,11 @@ class NovaTransacao extends StatelessWidget {
         ),
         actions: [
           Padding(
-            padding: const EdgeInsets.only(right: 12),
-            child: Icon(Icons.save),
-          )
+              padding: const EdgeInsets.only(right: 12),
+              child: IconButton(
+                icon: Icon(Icons.save),
+                onPressed: () {},
+              ))
         ],
       ),
       body: Padding(
@@ -24,9 +27,26 @@ class NovaTransacao extends StatelessWidget {
         child: Form(
           child: Column(
             children: [
+              DropdownButton(
+                onChanged: (value) {},
+                items: [
+                  DropdownMenuItem(
+                    child: Text("teste 1"),
+                  ),
+                  DropdownMenuItem(
+                    child: Text("teste 2"),
+                  ),
+                  DropdownMenuItem(
+                    child: Text("teste 3"),
+                  ),
+                  DropdownMenuItem(
+                    child: Text("teste 4"),
+                  ),
+                ],
+              ),
               TextFormField(
                 decoration: InputDecoration(labelText: "Valor"),
-              )
+              ),
             ],
           ),
         ),

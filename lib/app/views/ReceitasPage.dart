@@ -24,8 +24,6 @@ class _ReceitasPageState extends State<ReceitasPage> {
         children: [
           CardCustom(
             number: 0,
-            number1: 1,
-            number2: 2,
           )
         ],
       ),
