@@ -1,26 +1,13 @@
-import 'package:controle_gastos/app/data/databaseTransacao.dart';
+import 'package:controle_gastos/app/models/transacao.dart';
 import 'package:flutter/material.dart';
 
 class CardCustom extends StatelessWidget {
-  final int number;
-  final int number1;
-  final int number2;
-  final int number3;
-  final int number4;
+  final Transacao transacao;
 
-  const CardCustom(
-      {Key key,
-      this.number,
-      this.number1,
-      this.number2,
-      this.number3,
-      this.number4})
-      : super(key: key);
+  const CardCustom({Key key, this.transacao}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    const transacao = {...DATABASE_TRANSACAO};
-
     return Column(
       children: [
         Padding(
@@ -32,13 +19,10 @@ class CardCustom extends StatelessWidget {
                 Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(transacao.values.elementAt(number1).tipoTransacao),
-                      Text("R\$ ${transacao.values.elementAt(number1).valor}"),
+                      Text(transacao.tipoTransacao),
+                      Text(transacao.valor),
                       IconButton(
-                        onPressed: () {
-                          Navigator.of(context).pushNamed("/novaTransacao",
-                              arguments: transacao);
-                        },
+                        onPressed: () {},
                         icon: Icon(
                           Icons.edit,
                           color: Colors.orange,
