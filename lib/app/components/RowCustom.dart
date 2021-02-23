@@ -1,4 +1,4 @@
-import 'package:controle_gastos/models/transacao.dart';
+import 'package:controle_gastos/app/models/transacao.dart';
 import 'package:flutter/material.dart';
 
 class RowCustom extends StatelessWidget {

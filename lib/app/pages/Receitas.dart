@@ -1,7 +1,6 @@
-import 'package:controle_gastos/components/CustomBottomAppBar.dart';
-import 'package:controle_gastos/components/CustomDrawer.dart';
-import 'package:controle_gastos/components/CustomFloatingButton.dart';
-
+import 'package:controle_gastos/app/components/CustomBottomAppBar.dart';
+import 'package:controle_gastos/app/components/CustomDrawer.dart';
+import 'package:controle_gastos/app/components/CustomFloatingButton.dart';
 import 'package:flutter/material.dart';
 
 class Receitas extends StatefulWidget {

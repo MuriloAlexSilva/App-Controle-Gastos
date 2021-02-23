@@ -1,5 +1,4 @@
-import 'package:controle_gastos/components/CustomDrawer.dart';
-
+import 'package:controle_gastos/app/components/CustomDrawer.dart';
 import 'package:flutter/material.dart';
 
 class Investimentos extends StatefulWidget {
