@@ -1,97 +1,61 @@
+import 'package:controle_gastos/app/provider/transacaoProvider.dart';
+import 'package:provider/provider.dart';
 import 'package:flutter/material.dart';
 
 class CardCustom extends StatelessWidget {
-  final String texto1;
-  final String texto2;
-  final String rotaCustomizada1;
-  final String rotaCustomizada2;
-  final IconData icone1;
-  final IconData icone2;
+  final int number;
+  final int number1;
+  final int number2;
+  final int number3;
+  final int number4;
 
   const CardCustom(
       {Key key,
-      this.texto1,
-      this.texto2,
-      this.icone1,
-      this.icone2,
-      this.rotaCustomizada1,
-      this.rotaCustomizada2})
+      this.number,
+      this.number1,
+      this.number2,
+      this.number3,
+      this.number4})
       : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 10, top: 20, left: 10, right: 10),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          InkWell(
-            onTap: () {
-              Navigator.of(context).pushNamed("$rotaCustomizada1");
-            },
-            child: Container(
-              width: 170,
-              height: 200,
-              child: Card(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Icon(
-                      this.icone1,
-                      size: 40,
-                    ),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Text(
-                        texto1,
-                        style: TextStyle(fontSize: 25),
-                        textAlign: TextAlign.center,
+    final TransacaoProvider transacao = Provider.of(context);
+    return Column(
+      children: [
+        Padding(
+          padding: const EdgeInsets.all(12),
+          child: Card(
+            margin: EdgeInsets.all(12),
+            child: Column(
+              children: [
+                Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(transacao.all.elementAt(number1).tipoTransacao),
+                      Text("R\$ ${transacao.all.elementAt(number1).valor}"),
+                      IconButton(
+                        onPressed: () {
+                          Navigator.of(context).pushNamed("/novaTransacao",
+                              arguments: transacao);
+                        },
+                        icon: Icon(
+                          Icons.edit,
+                          color: Colors.orange,
+                        ),
                       ),
-                    )
-                  ],
-                ),
-              ),
+                      IconButton(
+                        onPressed: () {},
+                        icon: Icon(
+                          Icons.delete,
+                          color: Colors.red,
+                        ),
+                      ),
+                    ]),
+              ],
             ),
           ),
-          SizedBox(),
-          InkWell(
-            onTap: () {
-              Navigator.of(context).pushNamed("$rotaCustomizada2");
-            },
-            child: Container(
-              width: 170,
-              height: 200,
-              child: Card(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Icon(
-                      this.icone2,
-                      size: 40,
-                    ),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Text(
-                        texto2,
-                        textAlign: TextAlign.center,
-                        style: TextStyle(fontSize: 25),
-                      ),
-                    )
-                  ],
-                ),
-              ),
-            ),
-          ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }

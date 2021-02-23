@@ -1,7 +1,7 @@
-import 'package:controle_gastos/app/components/CardCustom.dart';
 import 'package:controle_gastos/app/components/CustomBottomAppBar.dart';
 import 'package:controle_gastos/app/components/CustomDrawer.dart';
 import 'package:controle_gastos/app/components/CustomFloatingButton.dart';
+import 'package:controle_gastos/app/components/RowCustom.dart';
 import 'package:controle_gastos/app/controllers/app_controller.dart';
 import 'package:flutter/material.dart';
 
@@ -25,7 +25,7 @@ class _HomePageState extends State<HomePage> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            CardCustom(
+            RowCustom(
               texto1: "Receitas",
               icone1: Icons.monetization_on,
               rotaCustomizada1: "/receitas",
@@ -33,7 +33,7 @@ class _HomePageState extends State<HomePage> {
               icone2: Icons.business_center,
               rotaCustomizada2: "/investimentos",
             ),
-            CardCustom(
+            RowCustom(
               texto1: "Despesas Essenciais",
               icone1: Icons.add_shopping_cart,
               rotaCustomizada1: "/despesasEssenciais",
@@ -41,7 +41,7 @@ class _HomePageState extends State<HomePage> {
               icone2: Icons.accessibility_new,
               rotaCustomizada2: "/despesasVariaveis",
             ),
-            CardCustom(
+            RowCustom(
               texto1: "Despesas Extras",
               icone1: Icons.android,
               rotaCustomizada1: "/despesasExtraordinarias",

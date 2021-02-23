@@ -1,13 +1,10 @@
 class Transacao {
-  final String titulo;
+  final String id;
+  final String categoria;
+  final String tipoTransacao;
+  final String valor;
   final String mes;
-  final String descricao;
-  final double valor;
 
-  Transacao({this.titulo, this.mes, this.descricao, this.valor});
-
-  @override
-  String toString() {
-    return 'Transacao(titulo: $titulo, mes: $mes, descricao: $descricao, valor: $valor)';
-  }
+  const Transacao(
+      {this.id, this.categoria, this.tipoTransacao, this.valor, this.mes});
 }
