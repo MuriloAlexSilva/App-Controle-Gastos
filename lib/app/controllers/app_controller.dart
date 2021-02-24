@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mobx/mobx.dart';
 
 class AppController extends ChangeNotifier {
   static AppController instance = AppController();

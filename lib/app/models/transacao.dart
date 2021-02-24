@@ -4,7 +4,7 @@ class Transacao extends ChangeNotifier {
   final String id;
   final String categoria;
   final String tipoTransacao;
-  final String valor;
+  final double valor;
   final String mes;
 
   Transacao(

@@ -20,7 +20,7 @@ class CardCustom extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(transacao.tipoTransacao),
-                      Text(transacao.valor),
+                      Text(transacao.valor.toString()),
                       IconButton(
                         onPressed: () {},
                         icon: Icon(

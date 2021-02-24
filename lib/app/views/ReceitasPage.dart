@@ -24,7 +24,7 @@ class _ReceitasPageState extends State<ReceitasPage> {
       body: PageView(
         children: [
           CardCustom(
-            transacao: Transacao(tipoTransacao: "Apartamento", valor: "200"),
+            transacao: Transacao(tipoTransacao: "Apartamento", valor: 200),
           )
         ],
       ),
