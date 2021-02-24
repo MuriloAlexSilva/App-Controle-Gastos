@@ -1,12 +1,17 @@
+import 'package:controle_gastos/app/models/transacao.dart';
 import 'package:controle_gastos/app/views/NovaTransacao.dart';
 import 'package:flutter/material.dart';
 import 'app/controllers/app_controller.dart';
 import 'app/views/HomePage.dart';
 import 'app/views/LoginPage.dart';
 import 'app/views/ReceitasPage.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(ChangeNotifierProvider(
+    create: (context) => Transacao(),
+    child: MyApp(),
+  ));
 }
 
 class MyApp extends StatelessWidget {
