@@ -25,67 +25,71 @@ class RowCustom extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          InkWell(
-            onTap: () {
-              Navigator.of(context).pushNamed("$rotaCustomizada1");
-            },
-            child: Container(
-              width: 170,
-              height: 200,
-              child: Card(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Icon(
-                      this.icone1,
-                      size: 40,
-                    ),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Text(
-                        texto1,
-                        style: TextStyle(fontSize: 25),
-                        textAlign: TextAlign.center,
+          Material(
+            child: InkWell(
+              onTap: () {
+                Navigator.of(context).pushNamed("$rotaCustomizada1");
+              },
+              child: Container(
+                width: 170,
+                height: 200,
+                child: Card(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Icon(
+                        this.icone1,
+                        size: 40,
                       ),
-                    )
-                  ],
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text(
+                          texto1,
+                          style: TextStyle(fontSize: 25),
+                          textAlign: TextAlign.center,
+                        ),
+                      )
+                    ],
+                  ),
                 ),
               ),
             ),
           ),
           SizedBox(),
-          InkWell(
-            onTap: () {
-              Navigator.of(context).pushNamed("$rotaCustomizada2");
-            },
-            child: Container(
-              width: 170,
-              height: 200,
-              child: Card(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Icon(
-                      this.icone2,
-                      size: 40,
-                    ),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Text(
-                        texto2,
-                        textAlign: TextAlign.center,
-                        style: TextStyle(fontSize: 25),
+          Material(
+            child: InkWell(
+              onTap: () {
+                Navigator.of(context).pushNamed("$rotaCustomizada2");
+              },
+              child: Container(
+                width: 170,
+                height: 200,
+                child: Card(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Icon(
+                        this.icone2,
+                        size: 40,
                       ),
-                    )
-                  ],
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text(
+                          texto2,
+                          textAlign: TextAlign.center,
+                          style: TextStyle(fontSize: 25),
+                        ),
+                      )
+                    ],
+                  ),
                 ),
               ),
             ),

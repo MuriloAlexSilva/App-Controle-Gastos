@@ -21,8 +21,16 @@ class _ReceitasPageState extends State<ReceitasPage> {
           "Receitas",
         ),
       ),
-      body: PageView(
-        children: [CardCustom()],
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(top: 20),
+              child: Text("Março", style: TextStyle(fontSize: 24)),
+            ),
+            CardCustom()
+          ],
+        ),
       ),
       floatingActionButton: CustomFloatingButton(),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,

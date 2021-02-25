@@ -3,11 +3,20 @@ import 'package:controle_gastos/app/components/CustomDrawer.dart';
 import 'package:controle_gastos/app/models/transacao.dart';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
-class NovaTransacao extends StatelessWidget {
-  TextEditingController _controllerCategoria = TextEditingController();
-  TextEditingController _controllerTipoTransacao = TextEditingController();
-  TextEditingController _controllerValor = TextEditingController();
+class NovaTransacao extends StatefulWidget {
+  @override
+  _NovaTransacaoState createState() => _NovaTransacaoState();
+}
+
+class _NovaTransacaoState extends State<NovaTransacao> {
+  final TextEditingController _controllerCategoria = TextEditingController();
+
+  final TextEditingController _controllerTipoTransacao =
+      TextEditingController();
+
+  final TextEditingController _controllerValor = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +32,16 @@ class NovaTransacao extends StatelessWidget {
               padding: const EdgeInsets.only(right: 12),
               child: IconButton(
                 icon: Icon(Icons.save),
-                onPressed: () {},
+                onPressed: () {
+                  final String categoria = _controllerCategoria.text;
+                  final String tipoTransacao = _controllerTipoTransacao.text;
+                  final double valor = double.tryParse(_controllerValor.text);
+                  final Transacao newTransacao = Transacao(
+                      categoria: categoria,
+                      tipoTransacao: tipoTransacao,
+                      valor: valor);
+                  print(newTransacao);
+                },
               ))
         ],
       ),
@@ -35,27 +53,41 @@ class NovaTransacao extends StatelessWidget {
               TextField(
                 controller: _controllerCategoria,
                 decoration: InputDecoration(labelText: "Categoria"),
+                keyboardType: TextInputType.text,
               ),
               TextField(
                 controller: _controllerTipoTransacao,
                 decoration: InputDecoration(labelText: "Tipo de Transação"),
+                keyboardType: TextInputType.text,
               ),
               TextField(
                 controller: _controllerValor,
                 decoration: InputDecoration(labelText: "Valor"),
+                keyboardType: TextInputType.number,
               ),
-              RaisedButton(
-                child: Text("Salvar"),
-                onPressed: () {
-                  final String categoria = _controllerCategoria.text;
-                  final String tipoTransacao = _controllerTipoTransacao.text;
-                  final double valor = double.tryParse(_controllerValor.text);
-                  final Transacao newTransacao = Transacao(
-                      categoria: categoria,
-                      tipoTransacao: tipoTransacao,
-                      valor: valor);
-                  print(newTransacao);
-                },
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: SizedBox(
+                  width: double.infinity,
+                  child: RaisedButton(
+                    child: Text(
+                      "Salvar",
+                      style: TextStyle(color: Colors.white),
+                    ),
+                    onPressed: () {
+                      final String categoria = _controllerCategoria.text;
+                      final String tipoTransacao =
+                          _controllerTipoTransacao.text;
+                      final double valor =
+                          double.tryParse(_controllerValor.text);
+                      final Transacao newTransacao = Transacao(
+                          categoria: categoria,
+                          tipoTransacao: tipoTransacao,
+                          valor: valor);
+                      Navigator.pop(context, newTransacao);
+                    },
+                  ),
+                ),
               )
             ],
           ),

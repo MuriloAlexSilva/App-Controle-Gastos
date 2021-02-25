@@ -10,6 +10,6 @@ class Transacao {
 
   @override
   String toString() {
-    return 'Produto{categoria: $categoria, tipoTransacao: $tipoTransacao, valor: $valor}';
+    return 'Transacao{id: $id, categoria: $categoria, tipoTransacao: $tipoTransacao, valor: $valor, mes: $mes}';
   }
 }

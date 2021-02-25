@@ -2,7 +2,6 @@ import 'package:controle_gastos/app/components/CustomBottomAppBar.dart';
 import 'package:controle_gastos/app/components/CustomDrawer.dart';
 import 'package:controle_gastos/app/components/CustomFloatingButton.dart';
 import 'package:controle_gastos/app/components/RowCustom.dart';
-import 'package:controle_gastos/app/controllers/app_controller.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -20,7 +19,6 @@ class _HomePageState extends State<HomePage> {
         title: Text(
           "Balanço Mensal",
         ),
-        actions: [CustomSwitch()],
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -57,17 +55,5 @@ class _HomePageState extends State<HomePage> {
       bottomNavigationBar: CustomBottomAppBar(),
       //
     );
-  }
-}
-
-class CustomSwitch extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Switch(
-        //Seria para trocar o tema no swtich
-        value: AppController.instance.isDarkTheme,
-        onChanged: (value) {
-          AppController.instance.changeTheme();
-        });
   }
 }
