@@ -1,9 +1,14 @@
 import 'package:controle_gastos/app/components/CustomBottomAppBar.dart';
 import 'package:controle_gastos/app/components/CustomDrawer.dart';
+import 'package:controle_gastos/app/models/transacao.dart';
 
 import 'package:flutter/material.dart';
 
 class NovaTransacao extends StatelessWidget {
+  TextEditingController _controllerCategoria = TextEditingController();
+  TextEditingController _controllerTipoTransacao = TextEditingController();
+  TextEditingController _controllerValor = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,26 +32,31 @@ class NovaTransacao extends StatelessWidget {
         child: Form(
           child: Column(
             children: [
-              DropdownButton(
-                onChanged: (value) {},
-                items: [
-                  DropdownMenuItem(
-                    child: Text("teste 1"),
-                  ),
-                  DropdownMenuItem(
-                    child: Text("teste 2"),
-                  ),
-                  DropdownMenuItem(
-                    child: Text("teste 3"),
-                  ),
-                  DropdownMenuItem(
-                    child: Text("teste 4"),
-                  ),
-                ],
+              TextField(
+                controller: _controllerCategoria,
+                decoration: InputDecoration(labelText: "Categoria"),
               ),
-              TextFormField(
+              TextField(
+                controller: _controllerTipoTransacao,
+                decoration: InputDecoration(labelText: "Tipo de Transação"),
+              ),
+              TextField(
+                controller: _controllerValor,
                 decoration: InputDecoration(labelText: "Valor"),
               ),
+              RaisedButton(
+                child: Text("Salvar"),
+                onPressed: () {
+                  final String categoria = _controllerCategoria.text;
+                  final String tipoTransacao = _controllerTipoTransacao.text;
+                  final double valor = double.tryParse(_controllerValor.text);
+                  final Transacao newTransacao = Transacao(
+                      categoria: categoria,
+                      tipoTransacao: tipoTransacao,
+                      valor: valor);
+                  print(newTransacao);
+                },
+              )
             ],
           ),
         ),

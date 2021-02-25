@@ -2,7 +2,7 @@ import 'package:controle_gastos/app/components/CardCustom.dart';
 import 'package:controle_gastos/app/components/CustomBottomAppBar.dart';
 import 'package:controle_gastos/app/components/CustomDrawer.dart';
 import 'package:controle_gastos/app/components/CustomFloatingButton.dart';
-import 'package:controle_gastos/app/models/transacao.dart';
+
 import 'package:flutter/material.dart';
 
 class ReceitasPage extends StatefulWidget {
@@ -22,11 +22,7 @@ class _ReceitasPageState extends State<ReceitasPage> {
         ),
       ),
       body: PageView(
-        children: [
-          CardCustom(
-            transacao: Transacao(tipoTransacao: "Apartamento", valor: 200),
-          )
-        ],
+        children: [CardCustom()],
       ),
       floatingActionButton: CustomFloatingButton(),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,

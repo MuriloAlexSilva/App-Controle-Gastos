@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
-
-class Transacao extends ChangeNotifier {
+class Transacao {
   final String id;
   final String categoria;
   final String tipoTransacao;
@@ -9,4 +7,9 @@ class Transacao extends ChangeNotifier {
 
   Transacao(
       {this.id, this.categoria, this.tipoTransacao, this.valor, this.mes});
+
+  @override
+  String toString() {
+    return 'Produto{categoria: $categoria, tipoTransacao: $tipoTransacao, valor: $valor}';
+  }
 }
