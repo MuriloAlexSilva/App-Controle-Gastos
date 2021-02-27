@@ -1,4 +1,6 @@
+import 'package:controle_gastos/app/views/DeletePage.dart';
 import 'package:controle_gastos/app/views/NovaTransacao.dart';
+
 import 'package:flutter/material.dart';
 import 'app/views/HomePage.dart';
 import 'app/views/LoginPage.dart';
@@ -27,7 +29,9 @@ class MyApp extends StatelessWidget {
         "/": (context) => LoginPage(),
         "/home": (context) => HomePage(),
         "/receitas": (context) => ReceitasPage(),
-        "/novaTransacao": (context) => NovaTransacao()
+        "/novaTransacao": (context) => NovaTransacao(),
+        "/deletePage": (context) => DeletePage(),
+
         // "/despesasEssenciais": (context) => DespesasEssenciais(),
         // "/despesasVariaveis": (context) => DespesasVariaveis(),
         // "/despesasExtraordinarias": (context) => DespesasExtraordinarias(),

@@ -1,7 +1,7 @@
 import 'package:controle_gastos/app/components/CustomBottomAppBar.dart';
 import 'package:controle_gastos/app/components/CustomDrawer.dart';
+import 'package:controle_gastos/app/database/dao/transacao_dao.dart';
 import 'package:controle_gastos/app/models/transacao.dart';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -17,6 +17,7 @@ class _NovaTransacaoState extends State<NovaTransacao> {
       TextEditingController();
 
   final TextEditingController _controllerValor = TextEditingController();
+  final TransacaoDao _dao = TransacaoDao();
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +41,9 @@ class _NovaTransacaoState extends State<NovaTransacao> {
                       categoria: categoria,
                       tipoTransacao: tipoTransacao,
                       valor: valor);
-                  print(newTransacao);
+                  _dao
+                      .save(newTransacao)
+                      .then((id) => Navigator.pop(context, newTransacao));
                 },
               ))
         ],
@@ -83,7 +86,9 @@ class _NovaTransacaoState extends State<NovaTransacao> {
                           categoria: categoria,
                           tipoTransacao: tipoTransacao,
                           valor: valor);
-                      Navigator.pop(context, newTransacao);
+                      _dao
+                          .save(newTransacao)
+                          .then((id) => Navigator.pop(context, newTransacao));
                     },
                   ),
                 ),
