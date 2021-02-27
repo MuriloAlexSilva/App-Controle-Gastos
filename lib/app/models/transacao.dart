@@ -1,8 +1,8 @@
 class Transacao {
-  final String id;
+  final int id;
   final String categoria;
   final String tipoTransacao;
-  final double valor;
+  final int valor;
   final String mes;
 
   Transacao(

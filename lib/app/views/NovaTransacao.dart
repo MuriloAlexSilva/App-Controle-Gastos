@@ -35,7 +35,7 @@ class _NovaTransacaoState extends State<NovaTransacao> {
                 onPressed: () {
                   final String categoria = _controllerCategoria.text;
                   final String tipoTransacao = _controllerTipoTransacao.text;
-                  final double valor = double.tryParse(_controllerValor.text);
+                  final int valor = int.tryParse(_controllerValor.text);
                   final Transacao newTransacao = Transacao(
                       categoria: categoria,
                       tipoTransacao: tipoTransacao,
@@ -78,8 +78,7 @@ class _NovaTransacaoState extends State<NovaTransacao> {
                       final String categoria = _controllerCategoria.text;
                       final String tipoTransacao =
                           _controllerTipoTransacao.text;
-                      final double valor =
-                          double.tryParse(_controllerValor.text);
+                      final int valor = int.tryParse(_controllerValor.text);
                       final Transacao newTransacao = Transacao(
                           categoria: categoria,
                           tipoTransacao: tipoTransacao,

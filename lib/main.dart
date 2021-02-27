@@ -5,9 +5,7 @@ import 'app/views/LoginPage.dart';
 import 'app/views/ReceitasPage.dart';
 
 void main() {
-  runApp(
-    MyApp(),
-  );
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
