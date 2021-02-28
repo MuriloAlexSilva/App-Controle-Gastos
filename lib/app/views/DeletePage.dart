@@ -13,7 +13,6 @@ class _DeletePageState extends State<DeletePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.transparent,
       appBar: AppBar(
         centerTitle: true,
         title: Text("New Contact"),
@@ -41,7 +40,7 @@ class _DeletePageState extends State<DeletePage> {
                     final int idNumber = int.tryParse(_idnumber.text);
                     _dao
                         .delete(idNumber)
-                        .then((id) => Navigator.of(context).pop());
+                        .then((id) => Navigator.of(context).pushNamed('/home'));
                   },
                   child: Text(
                     "Delete",

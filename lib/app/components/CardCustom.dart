@@ -19,7 +19,7 @@ class CardCustom extends StatelessWidget {
             child: Column(
               children: [
                 Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(12.0),
                   child: Text(transacaoItem.categoria,
                       style: TextStyle(fontSize: 20)),
                 ),
@@ -29,11 +29,19 @@ class CardCustom extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        Padding(
-                          padding: const EdgeInsets.only(left: 10.0),
-                          child: Text(transacaoItem.tipoTransacao),
+                        Row(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(left: 16.0),
+                              child: Text("${transacaoItem.id.toString()} - "),
+                            ),
+                            Text(transacaoItem.tipoTransacao),
+                          ],
                         ),
-                        Text("R\$ ${transacaoItem.valor}"),
+                        Padding(
+                          padding: const EdgeInsets.only(right: 16.0),
+                          child: Text("R\$ ${transacaoItem.valor}"),
+                        ),
                       ]),
                 ),
               ],

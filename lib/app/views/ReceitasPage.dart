@@ -1,7 +1,6 @@
 import 'package:controle_gastos/app/components/CardCustom.dart';
 import 'package:controle_gastos/app/components/CustomBottomAppBar.dart';
 import 'package:controle_gastos/app/components/CustomDrawer.dart';
-import 'package:controle_gastos/app/components/CustomFloatingButton.dart';
 import 'package:controle_gastos/app/database/dao/transacao_dao.dart';
 
 import 'package:controle_gastos/app/models/transacao.dart';
@@ -15,7 +14,6 @@ class ReceitasPage extends StatefulWidget {
 
 class _ReceitasPageState extends State<ReceitasPage> {
   final TransacaoDao _dao = TransacaoDao();
-  final TextEditingController _idnumber = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -105,8 +103,8 @@ class _ReceitasPageState extends State<ReceitasPage> {
           return Text("Unknown error");
         },
       ),
-      floatingActionButton: CustomFloatingButton(),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      // floatingActionButton: CustomFloatingButton(),
+      // floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: CustomBottomAppBar(),
     );
   }
