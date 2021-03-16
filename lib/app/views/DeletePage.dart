@@ -15,7 +15,7 @@ class _DeletePageState extends State<DeletePage> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text("New Contact"),
+        title: Text("Excluir Transação"),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),

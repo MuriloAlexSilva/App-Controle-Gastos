@@ -30,7 +30,7 @@ class _ReceitasPageState extends State<ReceitasPage> {
               showDialog(
                   context: context,
                   builder: (ctx) => AlertDialog(
-                        title: Text("Excluir Usuário"),
+                        title: Text("Excluir Transação"),
                         content: Text("Tem certeza?"),
                         actions: [
                           FlatButton(
