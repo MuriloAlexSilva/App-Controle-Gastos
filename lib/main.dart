@@ -1,43 +1,7 @@
-import 'package:controle_gastos/app/views/DeletePage.dart';
-import 'package:controle_gastos/app/views/NovaTransacao.dart';
-
 import 'package:flutter/material.dart';
-import 'app/views/HomePage.dart';
-import 'app/views/LoginPage.dart';
-import 'app/views/ReceitasPage.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 
-void main() {
-  runApp(MyApp());
-}
+import 'app/app_module.dart';
+import 'app/app_widget.dart';
 
-class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        fontFamily: 'Lobster',
-        brightness: Brightness.light, //Para mudar o formato do tema
-        primarySwatch: Colors.teal,
-        bottomAppBarColor: Colors.teal,
-        buttonColor: Colors.teal,
-      ),
-      debugShowCheckedModeBanner: false,
-      initialRoute: "/",
-      routes: {
-        "/": (context) => LoginPage(),
-        "/home": (context) => HomePage(),
-        "/receitas": (context) => ReceitasPage(),
-        "/novaTransacao": (context) => NovaTransacao(),
-        "/deletePage": (context) => DeletePage(),
-
-        // "/despesasEssenciais": (context) => DespesasEssenciais(),
-        // "/despesasVariaveis": (context) => DespesasVariaveis(),
-        // "/despesasExtraordinarias": (context) => DespesasExtraordinarias(),
-        // "/despesasAdicionais": (context) => DespesasAdicionais(),
-        // "/investimentos": (context) => Investimentos(),
-      },
-    );
-  }
-}
+void main() => runApp(ModularApp(module: AppModule(), child: AppWidget()));
