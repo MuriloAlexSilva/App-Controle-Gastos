@@ -8,7 +8,12 @@ class ReceitasModule extends Module {
 
   @override
   final List<ModularRoute> routes = [
-    ChildRoute('/receitasPage', child: (context, args) => ReceitasPage()),
+//Para receber os dados temos que colocar a tipagem de String
     ChildRoute<String>('/', child: (context, args) => HomePage()),
+    //Para enviar os dados para a contactPage e editar o usuario do index em questão
+    ChildRoute('/receitasPage', //tipar a childRoute <Contact>
+        child: (context, args) => ReceitasPage(
+            // contact: args.data,
+            )),
   ];
 }

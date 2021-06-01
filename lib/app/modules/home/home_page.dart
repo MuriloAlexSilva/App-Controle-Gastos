@@ -1,8 +1,7 @@
 import 'package:controle_gastos/app/components/appBar_custom.dart';
 import 'package:controle_gastos/app/components/bottom_navigator.dart';
-import 'package:controle_gastos/app/components/card_custom.dart';
+import 'package:controle_gastos/app/modules/home/components/card_custom.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_modular/flutter_modular.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -35,7 +34,7 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
       ),
-      bottomNavigationBar: bottomNavigator(),
+      bottomNavigationBar: BottomNavigator(),
     );
   }
 }
